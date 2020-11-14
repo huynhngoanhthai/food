@@ -157,7 +157,7 @@ section
 	height: 100%;
 	object-fit: cover;
 }
-
+ 
 .title
 {
 	width: 100%;
@@ -451,14 +451,7 @@ section
 		/*display: inline-block;*/
 	}
 .banner{
-	position: relative;
-	width: 100%;
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: url(img/bg.jpg);
-	background-size: cover; 
+	background-position: center;
 }
 	.banner .content h2
 	{
