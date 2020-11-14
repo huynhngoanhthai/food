@@ -348,18 +348,19 @@ section
 .contactForm .inputBox input[type="submit"]
 {
 	font-size: 1em;
-	justify-content: center;
-	color: #fff;
-	background: #ff0157;
-	display: inline-block;
-	text-transform: uppercase;
-	text-decoration: none;
-	letter-spacing: 2px;
-	transition: 0.5s;
-	max-width: 100px;
-	font-weight: 500;
-	border: none;
-	cursor: pointer;
+    justify-content: center;
+    padding: 10px 50%;
+    color: #fff;
+    background: #ff0157;
+    display: flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
 
 }
 
