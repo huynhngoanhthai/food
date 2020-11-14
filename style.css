@@ -348,6 +348,7 @@ section
 .contactForm .inputBox input[type="submit"]
 {
 	font-size: 1em;
+	justify-content: center;
 	color: #fff;
 	background: #ff0157;
 	display: inline-block;
@@ -409,6 +410,7 @@ section
 	}
 	.row .col .imgBx
 	{
+		float: left;
 		height: 300px;
 		margin: 20px;
 	}
