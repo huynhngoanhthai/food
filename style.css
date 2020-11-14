@@ -406,18 +406,6 @@ section
 		height: 300px;
 		margin: 20px;
 	}
-	.menu .content
-	{
-		margin-top: 20px;
-	}
-	.menu .content .box
-	{
-		margin: 10px;
-	}
-	.menu .content .box .imgBx
-	{
-		height: 260px;
-	}
 	.title
 	{
 		text-align: center;
