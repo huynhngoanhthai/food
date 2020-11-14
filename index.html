@@ -207,6 +207,13 @@
  			const header = document.querySelector('header');
  			header.classList.toggle("sticky",window.scrollY >0);
  		});
+		document.querySelector("body > header > div").addEventListener('click',function(){
+ 			if (document.querySelector(".navigation").style.display=="block") {
+ 				document.querySelector(".navigation").style.display=="none";
+ 			}else{
+ 				document.querySelector(".navigation").style.display="block";
+ 			}
+ 		});
  	</script>
 </body>
 </html>
