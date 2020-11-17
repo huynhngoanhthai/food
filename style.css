@@ -21,6 +21,8 @@ p{
 	align-items: center;
 	background: url(img/bg.jpg);
 	background-size: cover; 
+	background-color: #111;//fix lag
+
 }
 .banner .content
 {
@@ -66,12 +68,19 @@ header
 	align-items: center;
 	transition: 0.5s;
 }
-header.sticky 
+header.sticky
+
 {
 	background-color: #fff;
 	padding: 10px 100px;
 	box-shadow: 0 5px 20px rgba(0,0,0,.05);
-
+	transition: 0.5s;
+}
+header.stickys  
+{
+	background-color: #fff;
+	padding: 10px 100px;
+	box-shadow: 0 5px 20px rgba(0,0,0,.05);
 }
 header .logo {
 	color: #fff;
@@ -79,7 +88,8 @@ header .logo {
 	font-size: 2em;
 	text-decoration: none;
 }
-header.sticky .logo
+header.sticky .logo,
+header.stickys .logo
 {
 	color: #111;
 }
@@ -104,7 +114,8 @@ header .navigation li a
 	color: #fff;
 	font-weight: 300;
 }
-header.sticky .navigation li a
+header.sticky .navigation li a,
+header.stickys .navigation li a
 {
 	color: #111;
 }
@@ -365,9 +376,12 @@ section
 
 @media (max-width: 991px)
 {
-
+	.banner {
+    background-position: center;
+}
+/*
 	header{
-	/*position: relative;*/
+	
 	background: rgba(0,0,0,.5);
 	flex-wrap: wrap;
 }
@@ -380,7 +394,7 @@ section
 	background: rgba(0,0,0,.3);
 	text-align: right;
 	padding-right: 25px;
-}
+}*//*
 header .navigation li a
 {
 	color: #fff;
@@ -389,8 +403,8 @@ header.sticky .navigation li a
 {
 	color: #fff;
 }
-	header,
-	header.sticky
+*/	header,
+	header.sticky,header.stickys
 	{
 		max-width: 100%;
 		padding: 10px 20px;
@@ -398,6 +412,31 @@ header.sticky .navigation li a
 	header .navigation
 	{
 		display: none;
+	}
+	header .navigation.active
+	{
+		width: 100%;
+		height:  calc(100% - 66px);
+		left: 0;
+		top: 66px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		flex-direction: column;
+		background: #fff;
+
+	}
+	header .nacigation li
+	{
+		margin-left:  0;
+	}
+	header .navigation li a
+	{
+		
+		color: #111;
+		font-size: 1.6em;
+
 	}
 	.menuToggle
 	{
@@ -410,7 +449,15 @@ header.sticky .navigation li a
 		background-position: center;
 		cursor: pointer;
 	}
-	header.sticky .menuToggle
+	.menuToggle.active
+	{
+		background: url(img/close.png);
+		background-size: 25px;
+		background-repeat: no-repeat;
+		background-position: center;
+
+	}	
+	header.sticky .menuToggle,header.stickys .menuToggle
 	{
 		filter: invert(1);
 	}
@@ -468,7 +515,7 @@ header.sticky .navigation li a
 }
 @media (max-width: 480px) {
 	header,
-	header.sticky
+	header.sticky,header.stickys
 	{
 		max-width: 100%;
 	}
