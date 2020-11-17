@@ -207,12 +207,14 @@
  			const header = document.querySelector('header');
  			header.classList.toggle("sticky",window.scrollY >0);
  		});
-		document.querySelector(".menuToggle").addEventListener('click',function(){
- 			if (document.querySelector(".navigation").style.display=="block") {
- 				document.querySelector(".navigation").style.display="none";
- 			}else{
- 				document.querySelector(".navigation").style.display="block";
- 			}
+
+ 		document.querySelector(".menuToggle").addEventListener('click',function(){
+ 			const menuToggle = document.querySelector(".menuToggle");
+ 			const navigation = document.querySelector(".navigation");
+ 			menuToggle.classList.toggle('active');
+ 			navigation.classList.toggle('active');
+ 			const header = document.querySelector('header');
+ 			header.classList.toggle("stickys");
  		});
  	</script>
 </body>
