@@ -11,12 +11,12 @@
  		<a href="#" class="logo">Food<span>.</span></a>
  		<div class="menuToggle"></div>
  		<ul class="navigation">
- 			<li><a href="#banner">Home</a></li>
-	 		<li><a href="#about">About</a></li>
-	 		<li><a href="#menu">Menu</a></li>
-	 		<li><a href="#expert">Expert</a></li>
-	 		<li><a href="#testimonials">Testimonials</a></li>
-	 		<li><a href="#contact">Contact</a></li>
+ 			<li><a href="#banner" class="Togge" onclick="Togge()">Home</a></li>
+	 		<li><a href="#about" class="Togge" onclick="Togge()">About</a></li>
+	 		<li><a href="#menu" class="Togge" onclick="Togge()">Menu</a></li>
+	 		<li><a href="#expert" class="Togge" onclick="Togge()">Expert</a></li>
+	 		<li><a href="#testimonials" class="Togge" onclick="Togge()">Testimonials</a></li>
+	 		<li><a href="#contact" class="Togge" onclick="Togge()">Contact</a></li>
  		</ul>
  	</header>
  <section class="banner" id="banner">
@@ -208,6 +208,8 @@
  			header.classList.toggle("sticky",window.scrollY >0);
  		});
 
+
+
  		document.querySelector(".menuToggle").addEventListener('click',function(){
  			const menuToggle = document.querySelector(".menuToggle");
  			const navigation = document.querySelector(".navigation");
@@ -215,7 +217,17 @@
  			navigation.classList.toggle('active');
  			const header = document.querySelector('header');
  			header.classList.toggle("stickys");
- 		});
+			});
+ 		function Togge() {
+ 			const menuToggle = document.querySelector(".menuToggle");
+ 			const navigation = document.querySelector(".navigation");
+ 			menuToggle.classList.toggle('active');
+ 			navigation.classList.toggle('active');
+ 			const header = document.querySelector('header');
+ 			header.classList.toggle("stickys");
+ 		}
+
+ 		
  	</script>
 </body>
 </html>
