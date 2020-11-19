@@ -7,7 +7,6 @@
 	font-family: 'Poppins', sans-serif;
 	scroll-behavior: smooth;
 }
-
 p{
 	font-weight: 300;
 	color:#111;
@@ -22,6 +21,7 @@ p{
 	background: url(img/bg.jpg);
 	background-size: cover; 
 	background-color: #111;//fix lag
+		transition: 0.5s;
 
 }
 .banner .content
@@ -110,8 +110,11 @@ header .navigation li
 header .navigation li a
 {
 	text-decoration: none;
-	color: #fff;
-	font-weight: 300;
+    color: #fff;
+    display: inline-block;
+    font-weight: 300;
+    line-height: 48px;
+    text-align: center;
 }
 header.sticky .navigation li a,
 header.stickys .navigation li a
@@ -124,6 +127,7 @@ header .navigation li a:hover
 }
 section	
 {
+		transition: 0.5s;
 	padding: 100px;
 }
 .row
@@ -204,7 +208,6 @@ section
 	width: 100%;
 	top: 0;
 	left: 0;
-	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
@@ -241,7 +244,7 @@ section
 	position: absolute;
 	top:0;
 	left:0;
-	widows: : 100%;
+	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
@@ -257,6 +260,7 @@ section
 .testimonials
 {
 	background: url('img/bg2.jpg');
+	background-color: #311308;
 	background-size: cover;
 }
 .whited .titleText,
@@ -378,7 +382,7 @@ section
 {
 	.banner {
     background-position: center;
-}
+	}
 /*
 	header{
 	
@@ -509,11 +513,18 @@ header.sticky .navigation li a
 	.contactForm
 	{
 		padding: 35px 40px;
-		margin-top: 20px;
-		margin-bottom: 30px;
+		margin: auto;
 	}
+	.contactForm .inputBox input[type="submit"]
+	{
+		max-width: 100%;
+	}
+	
 }
 @media (max-width: 480px) {
+	.contact {
+    background-position: unset;
+	}
 	header,
 	header.sticky,header.stickys
 	{
